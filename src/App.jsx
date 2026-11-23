@@ -6,6 +6,7 @@ import About from "./pages/about/About";
 import Privacy from "./pages/privacy/Privacy";
 import NotFound from "./pages/NotFound/NotFound";
 import Terms from "./pages/Terms/Terms";
+import BlogDetails from "./pages/blogDetails/blogDetails";
 const router = createBrowserRouter([
   {
     path: "",
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
       {
         path: "blog",
         element: <Blog />,
+      },
+      {
+        path: "blog/:slug",
+        element: <BlogDetails />,
       },
       {
         path: "about",
