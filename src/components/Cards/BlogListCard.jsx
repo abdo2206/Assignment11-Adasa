@@ -11,7 +11,7 @@ export default function BlogListCard({ article, animationDelay = 0 }) {
 
   return (
     <article
-      className="group bg-[#161616] rounded-2xl border border-[#262626] hover:border-orange-500/30 transition-all duration-500 overflow-hidden"
+      className="group min-w-full bg-[#161616] rounded-2xl border border-[#262626] hover:border-orange-500/30 transition-all duration-500 overflow-hidden"
       style={{ animationDelay: `${animationDelay}ms` }}
     >
       <Link

@@ -8,10 +8,15 @@ import { CiGrid41 } from "react-icons/ci";
 import { FaListUl } from "react-icons/fa6";
 import BlogListCard from "../../components/Cards/BlogListCard";
 import BlogEmptyState from "../../components/EmptyData/EmptyBlogData";
+import { useSearchParams } from "react-router-dom";
 
 export default function Blog() {
+  const [searchParams] = useSearchParams();
+  const category = searchParams.get("category");
+  console.log(category);
+
   const [searchQuery, setSearchQuery] = useState("");
-  const [selectedCategory, setSelectedCategory] = useState("all");
+  const [selectedCategory, setSelectedCategory] = useState(category || "all");
   const [currentPage, setCurrentPage] = useState(1);
   const [viewMode, setViewMode] = useState("grid"); // "grid" or "list"
 
